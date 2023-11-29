@@ -1,6 +1,6 @@
 import random
 
-top_of_range = input("Type a number: ")
+top_of_range = input("Choose a number ( after that you have to choose between 1 - and your chosen number ) : ")
 
 if top_of_range.isdigit():
     top_of_range = int(top_of_range)
@@ -17,7 +17,7 @@ guesses = 0
 
 while True:
     guesses += 1
-    user_guess = input("Make a guess: ")
+    user_guess = input("Make a guess between  1 and " + str(top_of_range) + " : ")
     if user_guess.isdigit():
         user_guess = int(user_guess)
     else:
@@ -32,4 +32,4 @@ while True:
     else:
         print("You were below the number! ")
 
-print("You got it in", guesses, "guesses")
+print("You got it in", guesses, "guesses. Congratulations, you won. ")
